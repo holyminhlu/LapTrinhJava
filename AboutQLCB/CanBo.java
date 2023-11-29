@@ -1,54 +1,60 @@
 package AboutQLCB;
 
 public class CanBo {
-	protected String hoTen;
-    protected int tuoi;
-    protected String gioiTinh;
-    protected String diaChi;
-
-    public CanBo(String hoTen, int tuoi, String gioiTinh, String diaChi) {
-        this.hoTen = hoTen;
-        this.tuoi = tuoi;
-        this.gioiTinh = gioiTinh;
-        this.diaChi = diaChi;
+	private String ho;
+	private String ten;
+	private int age;
+	private String gt;
+	private String diachi;
+	public CanBo(String ho, String ten, int age, String gt, String diachi) {
+		this.ho = ho;
+		this.ten = ten;
+		this.age = age;
+		this.gt = gt;
+		this.diachi = diachi;
+	}
+	public String getHo() {
+		return ho;
+	}
+	public void setHo(String ho) {
+		this.ho = ho;
+	}
+	public String getTen() {
+		return ten;
+	}
+	public void setTen(String ten) {
+		this.ten = ten;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public String getGt() {
+		return gt;
+	}
+	public void setGt(String gt) {
+		this.gt = gt;
+	}
+	public String getDiachi() {
+		return diachi;
+	}
+	public void setDiachi(String diachi) {
+		this.diachi = diachi;
+	}
+	/*  public void xuatDanhSach() {
+        System.out.println("Ho & Ten: " + ho + ten);
+        System.out.println("Tuoi: "+age);
+        System.out.println("Gio tinh: "+gt);
+        System.out.println("Dia chi: "+diachi);
+    }   */
+	@Override
+	public String toString() {
+		return String.format("%-20s%-10s%-10s%-15s%-15s", ho, ten, age, gt, diachi);
+	}
+	public void xuatDanhSach() {
+        System.out.printf("%-15s%-10s%-10s%-15s%-15s", ho, ten, age, gt, diachi);
     }
-
-    public String getHoTen() {
-        return hoTen;
-    }
-
-    public void setHoTen(String hoTen) {
-        this.hoTen = hoTen;
-    }
-
-    public int getTuoi() {
-        return tuoi;
-    }
-
-    public void setTuoi(int tuoi) {
-        this.tuoi = tuoi;
-    }
-
-    public String getGioiTinh() {
-        return gioiTinh;
-    }
-
-    public void setGioiTinh(String gioiTinh) {
-        this.gioiTinh = gioiTinh;
-    }
-
-    public String getDiaChi() {
-        return diaChi;
-    }
-
-    public void setDiaChi(String diaChi) {
-        this.diaChi = diaChi;
-    }
-
-    public void hienThiThongTin() {
-        System.out.println("Họ tên: " + hoTen);
-        System.out.println("Tuổi: " + tuoi);
-        System.out.println("Giới tính: " + gioiTinh);
-        System.out.println("Địa chỉ: " + diaChi);
-    }
+	
 }

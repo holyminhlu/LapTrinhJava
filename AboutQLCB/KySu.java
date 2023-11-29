@@ -3,22 +3,27 @@ package AboutQLCB;
 public class KySu extends CanBo {
 	private String nganhDaoTao;
 
-    public KySu(String hoTen, int tuoi, String gioiTinh, String diaChi, String nganhDaoTao) {
-        super(hoTen, tuoi, gioiTinh, diaChi);
-        this.nganhDaoTao = nganhDaoTao;
-    }
+	public KySu(String ho, String ten, int age, String gt, String diachi, String nganhDaoTao) {
+		super(ho, ten, age, gt, diachi);
+		this.nganhDaoTao = nganhDaoTao;
+	}
 
-    public String getNganhDaoTao() {
-        return nganhDaoTao;
-    }
+	public String getNganhDaoTao() {
+		return nganhDaoTao;
+	}
 
-    public void setNganhDaoTao(String nganhDaoTao) {
-        this.nganhDaoTao = nganhDaoTao;
-    }
-
-    @Override
-    public void hienThiThongTin() {
-        super.hienThiThongTin();
-        System.out.println("Ngành đào tạo: " + nganhDaoTao);
+	public void setNganhDaoTao(String nganhDaoTao) {
+		this.nganhDaoTao = nganhDaoTao;
+	}
+	/* @Override
+	public void xuatDanhSach() {
+        super.xuatDanhSach();
+        System.out.println("Nganh dao tao: "+nganhDaoTao);
+    }  */
+	@Override
+	public void xuatDanhSach() {
+		super.xuatDanhSach();
+		System.out.printf("KY SU NGANH: ");
+        System.out.printf("%-10s \n", nganhDaoTao);
     }
 }
